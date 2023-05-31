@@ -1,0 +1,376 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*, *:before,*:after{
+  box-sizing: border-box;
+}
+body{
+  background: rgb(239,233,231);
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+a{
+  text-decoration: none;
+}
+.clearfix{
+  clear: both;
+}
+.header{
+  background: rgba(0,0,0,0.75);  
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+}
+.header-container{
+  padding: 12px 42px 12px 42px;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo h1{ /*寫margin0可以讓h1不會上下推擠高度*/
+  margin: 0;
+}
+.logo h1 a{
+  background: url(https://raw.githubusercontent.com/yan-tingciou/RWD-final/05c3ff601f2a6a26c289b7922fb25548338e35fa/images/logo_w%40svg.svg) no-repeat;
+  width: 120px;
+  height: 24px;
+  font-weight: bold;
+  display: block;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu-list {
+  font-size: 24px;
+  display: none;
+  color: #fff;
+}
+.menu-list:hover{
+  color: #3d1101;  
+}
+.menu > li{
+  float: left;
+}
+.menu li > a{
+  display: block;
+  color: #fff;
+  padding: 8px 15px;
+  position: relative;
+}
+.menu > li > a:hover::after{
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+.banner{
+  background: url(https://raw.githubusercontent.com/yan-tingciou/RWD-final/main/images/header_desktop%402x.png) no-repeat;
+  background-size: cover;
+  height: 420px;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media(max-width:1024px){
+  .banner{
+    background: url(https://github.com/yan-tingciou/RWD-final/blob/main/images/header_desktop.png?raw=true) no-repeat;
+    height: 420px;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+}
+.banner-container{
+  text-align: center;
+  padding: 20px 42px 26px 22px;
+  background: rgba(0,0,0,.35);
+}
+.banner h2{
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.banner span{
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.3;
+}
+@media(max-width:568px){
+  .menu-list{
+    display: block;
+    float: right;
+  }
+  .menu{
+    /*隱藏選單*/
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1.5s;
+    margin-top: 1px;
+    /*絕對定位*/    
+    position: absolute;
+    z-index: 10;
+    top: 52px;
+    right: 0;
+    left: 0;
+    background: rgb(0,0,0,.75);
+  }
+  .menu{
+    float: none;
+  }
+  .menu > li{
+    float: none;
+    text-align: center;
+    border-bottom: 1px #fff solid;
+  }
+  .menu > li > a{
+    padding: 14px 0;
+  }
+  .menu > li > a:hover{
+    font-weight: bold;
+    background: rgba(61,17,1,0.7);
+  }
+  .menu > li > a:hover::after{
+    border-bottom: none;    
+  }
+  .banner{
+    background: url(https://github.com/yan-tingciou/RWD-final/blob/main/images/Bitmap.png?raw=true) no-repeat;;
+    height: 420px;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.menu-show .menu{
+  max-height: 225px
+}
+.register{
+  color: #3D1101;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+.register h2{
+  padding-top: 50px;
+  font-size: 48px;
+  text-align: center;
+  font-weight: bold;
+}
+.register > p{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.register-input{
+  padding: 0 5px;
+}
+.register-container{
+  border-top: 3px solid #FF5E45;
+  width: 620px;
+  margin: 0 auto;
+  box-shadow: 3px 2px 4px 0px #718093;
+}
+.register-container > p{
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 15px;
+}
+.register-container-bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+.register-container-bottom > div{
+  width: 46%;
+  margin: 20px 2%;
+}
+@media(max-width:768px){
+  .register{
+    padding: 0 5%;
+  }
+  .register-container{
+    width: 90%;
+  }
+  .register-container-bottom{
+    flex-direction: column;
+  }
+  .register-container-bottom > div{
+    width: 96%;
+  }
+}
+.register-terms{
+  line-height: 1.3;
+}
+.register-input-logo{
+  margin-top: 15px;
+  position: relative;
+  .logo-email{
+    position: absolute;
+    top: 28px;
+    left: 9px;
+    font-size: 16px;
+    z-index: 10;
+    color: rgba(61, 17, 1, 0.5);
+  }
+   .logo-pwd-1{
+    position: absolute;
+    top: 28px;
+    left: 9px;
+    font-size: 16px;
+    z-index: 10;
+    color: rgba(61, 17, 1, 0.5);
+  }
+  .logo-pwd-2{
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    font-size: 16px;
+    z-index: 10;
+    color: rgba(61, 17, 1, 0.5);
+  }
+}
+input[type='email'], input[type='password']{
+  width: 100%;
+  padding: 8px 0 8px 28px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  margin-top: 4px; /*input跟上面label字的距離*/
+}
+.register-button{
+  padding: 30px 0 0;
+  float: right;
+}
+input[type='button']{
+  cursor: pointer;
+}
+.button{
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  padding: 9px;
+  width: 125px;
+}
+.orange-register{
+  background: #F56C23;
+}
+.footer{
+  max-width: 1024px;
+  margin: 0 auto;
+  background: rgb(239,233,231);
+}
+.footer-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3%;
+}
+.footer-list > li{
+  width: 29.3333%;
+  margin: 0 2%;
+  line-height: 1.3;
+}
+.footer-list h3{
+  margin: 25px 0;
+  font-size: 24px;
+}
+@media(max-width:768px){
+  .footer-list{
+    padding: 1%;
+  }
+  .footer-list > li{
+  width: 31.3333%;
+  margin: 0 1%;
+  line-height: 1.3;
+  }
+}
+@media(max-width:568px){
+  .footer-list{
+    flex-direction: column;
+  }
+  .footer-list > li{
+    width: 94%;
+    margin: 0 3%;
+  }
+}
+.contact > li{
+  margin-left: 8%;
+  list-style-type: disc;
+}
+.media{
+  float: right;
+}
+.media h3 a{
+  display: inline-block;
+  background: url(https://raw.githubusercontent.com/yan-tingciou/RWD-final/abedd57541e156936ed411aa9ea0f2088fe0bce0/images/logo_l%40svg.svg) no-repeat;
+  width: 245px;
+  height: 49px;
+}
+.media p{
+  font-size: 36px;
+  text-align: right;
+}
+@media(max-width:768px){
+  .media h3 a{
+    background-size: 183.75px 36.75px;
+    background-position: right center;
+  }
+}
+@media(max-width:568px){
+  .media h3 a{
+    display: inline-block;
+    background: url(https://raw.githubusercontent.com/yan-tingciou/RWD-final/abedd57541e156936ed411aa9ea0f2088fe0bce0/images/logo_l%40svg.svg) no-repeat;
+    width: 245px;
+    height: 49px;
+  }
+}

@@ -57,9 +57,6 @@ table {
   .clearfix{
     clear: both;
   }
-  .wrap{
-  
-  }
   .header{
     background: rgba(0,0,0,0.75);  
     position: fixed;
@@ -132,7 +129,7 @@ table {
       align-items: center;
     }  
   }
-  .banner-ad{
+  .banner-container{
     text-align: center;
     padding: 20px 42px 26px 22px;
     background: rgba(0,0,0,.35);
@@ -472,6 +469,8 @@ table {
     border-radius: 3px;
   }
   .footer{
+    max-width: 1024px;
+    margin: 0 auto;
     background: rgb(239,233,231);
   }
   .footer-list{
