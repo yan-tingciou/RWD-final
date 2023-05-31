@@ -210,9 +210,6 @@ table {
     font-weight: bold;
     padding-bottom: 30px;
   }
-  .login-input{
-    padding: 0 15px;
-  }
   .login-container{
     border-top: 3px solid #FF5E45;
     width: 330px;
@@ -224,6 +221,9 @@ table {
     text-align: center;
     font-weight: bold;
     padding-top: 15px;
+  }
+  .login-input{
+    padding: 0 15px;
   }
   .login-input-logo{
     margin-top: 15px;
@@ -237,7 +237,11 @@ table {
       color: rgba(61, 17, 1, 0.5);
     }
   }
-  
+  .login-input-logo p{
+    padding-top: 10px;
+    font-size: 14px;
+    color: #FF5E45;
+  }
   input[type='email'], input[type='password']{
     width: 100%;
     padding: 8px 0 8px 28px;
