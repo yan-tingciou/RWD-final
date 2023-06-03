@@ -250,16 +250,7 @@ a{
     margin-top: 10px;
   }
 }
-@media(max-width:568px){
-  .online{
-    width: 40%;
-  }
-  .online-burger{
-    width: 57%;
-    margin-left: 2%;
-  }
-}
-@media(max-width:320px){
+@media(max-width:414px){
   .order{
     flex-direction: column;
   }
@@ -442,13 +433,6 @@ line{
   color: #fff;
 }
 @media(max-width:768px){
-  .burger-menu > li{
-    width: 47%;
-    margin-right: 3%;
-  }
-  
-}
-@media(max-width:568px){
   .burger-menu > li{
     width: 97%;
   }
