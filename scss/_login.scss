@@ -1,0 +1,77 @@
+.login{
+    color: $color-main;
+    font-family: $ff-sans;
+    margin-bottom: 20px;
+  h2{
+    padding-top: 50px;
+    font-size: $font-3xl;
+    text-align: center;
+    font-weight: $fw-bold;
+  }
+  > p{
+    font-size: $font-m;
+    text-align: center;
+    font-weight: $fw-bold;
+    padding-bottom: 30px;    
+  }
+}
+.login-container{
+  border-top: 3px solid $color-minor2;
+  width: 330px;
+  margin: 0 auto;
+  box-shadow: 1px 2px 6px 1px #718093;
+  p{
+    font-size: $font-s;
+    text-align: center;
+    font-weight: $fw-bold;
+    padding-top: 15px;
+  }
+}
+.login-input{
+  padding: 0 15px;
+}
+.login-input-logo{
+  margin-top: 15px;
+  position: relative;
+  .logo-email{
+    position: absolute;
+    top: 28px;
+    left: 9px;
+    font-size: $font-2s;
+    z-index: 10;
+    color: $color-main05;
+  }
+  p{
+    padding-top: 10px;
+    font-size: $font-3s;
+    color: $color-minor2;
+  }
+  input{
+    width: 100%;
+    padding: 8px 0 8px 28px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    margin-top: 4px; /*input跟上面label字的距離*/
+  }
+}
+.login-button{
+  padding: 30px 0;
+}
+.button{
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  width: 135px;
+  font-size: $font-3s;
+  color: $color-f;
+  padding: 10px 0;
+}
+.gray-register{
+  background: rgba(0,0,0,0.35);
+  margin-right: 8.5%;
+}
+.orange-login{
+  background: $color-minor2;
+}

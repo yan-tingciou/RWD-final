@@ -1,0 +1,239 @@
+.order{
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 4% 1% 4% 3%;
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-main;
+  @include iphone10(){
+    flex-direction: column;
+  }
+} 
+.online{
+  width: 22%;
+  p{
+    font-size: $font-m;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  > li{
+    border-bottom: 1px solid $color-b;
+    &:hover{
+      background: $color-main;
+    }
+    > a{
+      display: block;
+      padding-left: 8px;
+      color: $color-main;
+      line-height: 1.5;
+      padding: 5px 0 5px 8px;
+      &:hover{
+        color: $color-f;
+      }
+    }
+  }
+  @include pad(){
+    width: 30%;
+  }
+  @include iphone10(){
+    width: 100%;
+  }
+}
+.online-burger{
+  margin-left: 2%;
+  width: 76%;
+  @include pad(){
+    width: 68%;
+    margin-left: 2%;
+  }
+  @include iphone10(){
+    width: 97%;
+    margin-left: 2%;
+  }
+}
+.online-bar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include pad(){
+    flex-direction: column;
+    align-items: end;
+    > li{
+    margin-top: 10px;
+  }
+  }
+}
+.search{
+  width: 64%;
+  margin-top: 6px;
+  @include pad(){
+    width: 100%;
+  }
+}
+.input-search{
+  background: $color-minor1;
+  font-family: $ff-sans;
+  &:focus{ /*input點擊後的邊框效果*/
+    outline: none;
+  }
+}
+.search-bar{
+  display: flex;
+  width: 100%;
+}
+.search-icon{
+  background: $color-main;
+  padding: 6px 8px;  
+}
+.cart{
+  width: 26%;
+  padding-right: 5px;
+  @include pad(){
+    width: 38%;
+  }
+  @include mobile568(){
+    width: 100%;
+  }
+}
+.checkout{
+  border-right: 1px solid;
+  margin-top: 6px;
+  a{
+    color: $color-main;
+    &:hover{
+      font-weight: $fw-bold;
+    }
+  }
+}
+.cart-list{
+  float: right;
+  > li{
+    float: left;
+    padding: 0px 12px;
+  }
+}
+.cart-logo{
+  position: relative;
+  i{
+    color: $color-main;
+    &:hover{
+      color: $color-main07;
+    }
+  }
+  p{
+    font-size: $font-4s;
+    position: absolute;
+    right: 6%;
+    top: 0;
+    background: $color-minor2;
+    color: $color-f;
+    padding: 3px 6px;
+    border-radius: 50px;
+  }
+}
+.burger-menu{
+  display: flex;
+  flex-wrap: wrap;
+  > li{
+    width: 30.33334%;
+    margin-right: 3%;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.3;
+    position: relative;
+    &:hover{
+      box-shadow: 1px 2px 6px 1px #718093;
+      cursor: pointer;
+    }
+    @include pad(){
+      width: 97%;
+    }
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  h4{
+    margin-top: 15px;
+    font-size: $font-m;
+  }
+  span{
+    font-family: $ff-sans;
+    font-size: $font-4s;
+    margin-bottom: 10px;
+  }
+  p{
+    font-family: $ff-sans;
+    font-style: italic;
+    font-size: $font-m;
+    margin: 15px 0;
+  }
+  h5{
+    color: $color-minor2;
+    border: 2px solid $color-minor2;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 8px;
+    &:hover{
+      color: $color-f;
+      background: $color-minor2;
+      font-weight: $fw-bold;
+      transition: 0.3s;
+    }
+  }
+  i{
+    &:hover{
+      color: $color-f;
+    }
+  }
+}
+.burger-menu h5.add{
+  color: $color-f;
+  background: $color-minor2;
+  font-weight: $fw-bold;
+  transition: 0.3s;
+}
+.heart{
+  color: $color-f;
+  font-size: $font-l;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  &:hover{
+    font-weight: $fw-bold;
+  }
+}
+.heart.full{
+  font-weight: $fw-bold;
+}
+.burger-pop{
+  position: absolute;/*位移要超出原有的框架，才能做出緞帶效果*/
+  top: -3px;
+  right: -3px;
+  overflow: hidden;/*超出的部份隱藏*/
+  width: 160px;
+  height: 100px;
+  .ribbon {
+    font-size: $font-3s;
+    position: relative;
+    width: 160px;
+    background-color: #00CC99;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-align: center;
+    margin-top: 5px;
+    color: $color-f;
+    /*rotate為旋轉、translate為移動、skew為傾斜、scale為縮放*/
+    transform: translateX(40%) rotate(45deg)  translateY(50%);
+  }
+}
+line{
+  display: block;
+  width: 86px;
+  border-bottom: 2px solid $color-main;
+  position: absolute;
+  margin-top: 5px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
