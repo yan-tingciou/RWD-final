@@ -63,7 +63,7 @@ a {
   text-decoration: none;
 }
 
-input[type=name], input[type=tel], input[type=email], input[type=number], input[type=password] {
+input[type=name], input[type=tel], input[type=email], input[type=number], input[type=password], input[type=search] {
   width: 100%;
 }
 
@@ -145,6 +145,40 @@ input[type=button] {
   border-bottom: 2px solid #fff;
 }
 
+@media (max-width: 568px) {
+  .menu {
+    float: none;
+    /*隱藏選單*/
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition: max-height 1.5s;
+    transition: max-height 1.5s;
+    margin-top: 1px;
+    /*絕對定位*/
+    position: absolute;
+    z-index: 10;
+    top: 52px;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  .menu > li {
+    float: none;
+    text-align: center;
+    border-bottom: 1px #fff solid;
+  }
+  .menu > li > a {
+    padding: 14px 0;
+  }
+  .menu > li > a:hover {
+    font-weight: bold;
+    background: rgba(61, 17, 1, 0.7);
+  }
+  .menu > li > a:hover::after {
+    border-bottom: none;
+  }
+}
+
 .banner {
   background: url(https://raw.githubusercontent.com/yan-tingciou/RWD-final/main/images/header_desktop%402x.png) no-repeat;
   background-size: cover;
@@ -196,40 +230,6 @@ input[type=button] {
   text-align: center;
   padding: 20px 42px 26px 22px;
   background: rgba(0, 0, 0, 0.35);
-}
-
-@media (max-width: 568px) {
-  .menu {
-    /*隱藏選單*/
-    max-height: 0px;
-    overflow: hidden;
-    -webkit-transition: max-height 1.5s;
-    transition: max-height 1.5s;
-    margin-top: 1px;
-    /*絕對定位*/
-    position: absolute;
-    z-index: 10;
-    top: 52px;
-    right: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.75);
-    float: none;
-  }
-}
-.menu > li {
-  float: none;
-  text-align: center;
-  border-bottom: 1px #fff solid;
-}
-.menu > li > a {
-  padding: 14px 0;
-}
-.menu > li > a:hover {
-  font-weight: bold;
-  background: rgba(61, 17, 1, 0.7);
-}
-.menu > li > a:hover::after {
-  border-bottom: none;
 }
 
 .menu-show .menu {

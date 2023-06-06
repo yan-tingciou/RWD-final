@@ -53,6 +53,38 @@
         }
     }
 }
+.menu{
+    @include mobile568(){
+        float: none;        
+        /*隱藏選單*/
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1.5s;
+        margin-top: 1px;
+        /*絕對定位*/    
+        position: absolute;
+        z-index: 10;
+        top: 52px;
+        right: 0;
+        left: 0;
+        background: $color-b075;
+        > li {
+        float: none;
+        text-align: center;
+        border-bottom: 1px $color-f solid;
+        > a{
+            padding: 14px 0;
+            &:hover{
+                font-weight: $fw-bold;
+                background: rgba(61,17,1,0.7);
+            }
+            &:hover::after{
+                border-bottom: none;    
+            }
+        }
+    }
+    }
+}
 .banner{
     @include desk-top(){
         background: url(https://github.com/yan-tingciou/RWD-final/blob/main/images/header_desktop.png?raw=true) no-repeat;
@@ -88,38 +120,6 @@
     padding: 20px 42px 26px 22px;
     background: rgba(0,0,0,.35);
   }
-.menu{
-    @include mobile568(){
-        /*隱藏選單*/
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height 1.5s;
-        margin-top: 1px;
-        /*絕對定位*/    
-        position: absolute;
-        z-index: 10;
-        top: 52px;
-        right: 0;
-        left: 0;
-        background: $color-b075;
-        float: none;
-    }
-    > li {
-        float: none;
-        text-align: center;
-        border-bottom: 1px $color-f solid;
-        > a{
-            padding: 14px 0;
-            &:hover{
-                font-weight: $fw-bold;
-                background: rgba(61,17,1,0.7);
-            }
-            &:hover::after{
-                border-bottom: none;    
-            }
-        }
-    }
-}
 .menu-show .menu{
     max-height: 225px
 }
