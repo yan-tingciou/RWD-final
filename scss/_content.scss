@@ -1,273 +1,259 @@
 .content{
-    max-width: 1024px;
-    margin: 0 auto;
-    padding-top: 80px;
-    background: rgb(239,233,231);
-  }
-  .feature{
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-  .feature h3{
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-top: 80px;
+  background: rgb(239,233,231);
+}
+.feature{
+  max-width: 1024px;
+  margin: 0 auto;
+  h3{
     color: #3D1101;
     text-align: center;
-    font-size: 20px;
+    font-size: $font-m;
     line-height: 1.5;
     position: relative;
   }
-  .line-left{
-    display: block;
-    width: 120px;
-    border-bottom:1px solid #979797;
-    position: absolute;
-    right: 61%;
-  }
-  .line-right{
-    display: block;
-    width: 120px;
-    border-bottom:1px solid #979797;
-    position: absolute;
-    left: 61%;
-  }
-  .feature-tip{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .feature-tip > li{
+}
+.line-left{
+  display: block;
+  width: 120px;
+  border-bottom:1px solid #979797;
+  position: absolute;
+  right: 61%;
+}
+.line-right{
+  display: block;
+  width: 120px;
+  border-bottom:1px solid #979797;
+  position: absolute;
+  left: 61%;
+}
+.feature-tip{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  > li{
     width: 29.3333%;
     margin: 0 2%;
     padding: 3% 3% 4%;
-  }
-  .feature-tip img{
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-  }
-  .feature-tip h5{
-    color: #3D1101;
-    font-size: 18px;
-    text-align: center;
-    padding: 20px 0 11px;
-  }
-  .feature-tip p{
-    color: #3D1101;
-    font-size: 16px;
-    line-height: 1.3;
-  }
-  @media(max-width:768px){
-    .feature-tip{
-      justify-content: flex-start;
-    }
-    .feature-tip > li{
+    @include pad(){
       width: 48%;
       margin: 0 1%;
     }
-  }
-  @media(max-width:568px){
-    .feature-tip > li{
+    @include mobile568(){
       width: 90%;
       margin: 0 5%;
     }
   }
-  .chef{
-    background: rgb(61,17,1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 4%;
-  }
-  .chef > ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .chef > ul >li{
-    width: 50%;
-  }
-  .chef-photo img{
+  img{
+    border-radius: 50%;
     display: block;
     margin: 0 auto;
-    max-width: 100%;
   }
-  .chef-profile{
-    padding: 0 4% 0;
+  h5{
+    color: $color-main;
+    font-size: $font-s;
+    text-align: center;
+    padding: 20px 0 11px;
   }
-  .chef-profile h4{
-    color: #fff;
-    font-size: 20px;
-    line-height: 1.5;
-  }
-  .chef-profile h5{
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: sans-serif;
-  }
-  .chef-profile p{
-    margin-top: 1em;
-    color: #fff;
-    font-size: 16px;
+  p{
+    color: $color-main;
+    font-size: $font-2s;
     line-height: 1.3;
-    font-family: sans-serif;
   }
-  @media(max-width:768px){
-    .chef{
-      padding: 0;
-    }
-    .chef > ul >li{
-      width: 100%;
-    }
+  @include pad(){
+    justify-content: flex-start;
   }
-  @media(max-width:568px){
-    .chef > ul{
+}
+.chef{
+  @include pad(){
+    padding: 0;
+  }
+  background: $color-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4%;
+  > ul{
+    @include mobile568(){
       display: flex;
       flex-direction: column;
       justify-content: center;
-    } 
-    .chef-profile{
-      margin: 8%;
-      padding: 0 7%;
     }
-  }
-  .feedback{
-    color: #3D1101;
-    padding: 0 3% 40px;
-  }
-  .feedback h4{
-    text-align: center;
-    font-size: 24px;
-    padding: 50px 0 32px;
-  }
-  .feedback-detail{
     display: flex;
     justify-content: center;
+    align-items: center;
+    >li{
+      width: 50%;
+      @include pad(){
+        width: 100%;
+      }
+    }
   }
-  .feedback-detail > li{
+}
+.chef-photo img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.chef-profile{
+  @include mobile568(){
+    margin: 8%;
+    padding: 0 7%;
+  }
+  padding: 0 4% 0;
+  h4{
+    color: $color-f;
+    font-size: $font-m;
+    line-height: 1.5;
+  }
+  h5{
+    color: #fff;
+    font-size: $font-2s;
+    line-height: 1.5;
+    font-family: $ff-sans;
+  }
+  p{
+    margin-top: 1em;
+    color: #fff;
+    font-size: $font-2s;
+    line-height: 1.3;
+    font-family: $ff-sans;
+  }
+}
+.feedback{
+  color: $color-main;
+  padding: 0 3% 40px;
+  h4{
+    text-align: center;
+    font-size: $font-xl;
+    padding: 50px 0 32px;
+  }
+}
+.feedback-detail{
+  @include mobile568(){
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  display: flex;
+  justify-content: center;
+  > li{
     width: 32.333%;
     margin: 1%;
-  }
-  .feedback-detail p{
-    padding: 0 0 5% 27%;
-  }
-  .feedback-detail h6{
-    text-align: right;
-  }
-  .feedback-detail-1{
-    display: flex;
-    align-items: center;
-  }
-  .feedback-detail-1 img{
-    border-radius: 50%;
-  }
-  .feedback-detail-1 h5{
-    font-size: 18px;
-    padding-left: 5%;
-  }
-  @media(max-width:568px){
-    .feedback-detail{
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 50px;
-    }
-    .feedback-detail > li{
+    @include mobile568(){
       width: 94%;
       margin: 0 3%;
     }
   }
-  .location{
-    background: rgb(246,244,243);
+  p{
+    padding: 0 0 5% 27%;
   }
-  .location h4{
+  h6{
+    text-align: right;
+  }
+}
+.feedback-detail-1{
+  display: flex;
+  align-items: center;
+  img{
+    border-radius: 50%;
+  }
+  h5{
+    font-size: $font-s;
+    padding-left: 5%;
+  }
+}
+.location{
+  background: rgb(246,244,243);
+  h4{
     padding: 5% 0 0;
     text-align: center;
-    font-size: 24px;
+    font-size: $font-xl;
     line-height: 1.3;
   }
-  .place{
-    padding: 3%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
+}
+.place{
+  @include pad(){
+    padding: 4% 2%;
   }
-  .place li{
+  padding: 3%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  > li{
     width: 47%;
     margin: 20px 1.5% 0;
   }
-  .place-map l{
+  @include pad(){
+    width: 48%;
+    margin: 20px 1% 0;
+  }
+  @include mobile568(){
+    width: 96%;
+    margin: 20px 2% 0;  
+  }
+}
+.map-l{
+  @include pad(){
+    display: none;
+  }
+  @include mobile568(){
+    display: none;
+  }
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.map-m{
+  @include pad(){
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  @include mobile568(){
+    display: none;
+  }
+  display: none;
+}
+.map-s{
+  @include pad(){
+    display: none;
+  }
+  @include mobile568(){
     display: block;
     margin: 0 auto;
     max-width: 100%;
     height: 100%;
   }
-  .map-m{
-    display: none;
-  }
-  .map-s{
-    display: none;
-  }
-  .place-reservation{
-    display: flex;
-    height: 386px;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .place-reservation input{
+  display: none;
+}
+.place-reservation{
+  display: flex;
+  height: 386px;
+  flex-direction: column;
+  justify-content: space-around;
+  input{
     padding-left: 3%;
-    font-size: 16px;
+    font-size: $font-2s;
     height: 32px;
     border: 1px solid #CCCCCC;
     border-radius: 3px;
-    font-family: sans-serif;
+    font-family: $ff-sans;
+    &:focus{ /*input點擊後的邊框效果*/
+      border-color: $color-main;
+      color: $color-main;
+      outline: none;
+    }
   }
-  .place-reservation input:focus{ /*input點擊後的邊框效果*/
-    border-color: #3D1101;
-    color: #3D1101;
-    outline: none;
+  label, span{
+    font-size: $font-3s;
   }
-  .place-reservation label,.place-reservation span{
-    font-size: 14px;
-  }
-  .place-reservation span{
+  span{
     margin-top: 10px;
   }
-  @media(max-width:768px){
-    .place{
-      padding: 4% 2%;
-    }
-    .place > li{
-      width: 48%;
-      margin: 20px 1% 0;
-    }
-    .map-l{
-      display: none;
-    }
-    .map-m{
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-    }
-    .map-s{
-      display: none;
-    }
-  }
-  @media(max-width:568px){
-    .place li{
-      width: 96%;
-      margin: 20px 2% 0;  }
-    .map-l{
-      display: none;
-    }
-    .map-m{
-      display: none;
-    }
-    .map-s{
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: 100%;
-    }
-  }
+}
   .vegetarian label, .vegetarian input{
     display: inline-block;
     width: 15px;
@@ -281,12 +267,12 @@
   }
   .button-send{
     background: #F56C23;
-    color: #fff;
+    color: $color-f;
     border-radius: 3px;
   }
   .button-cancel{
     margin: 0 10px;
     background: rgba(0,0,0,0.35);
-    color: #fff;
+    color:$color-f;
     border-radius: 3px;
   }
