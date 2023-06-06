@@ -114,7 +114,7 @@
                 font-weight: $fw-bold;
                 background: rgba(61,17,1,0.7);
             }
-            &a:hover::after{
+            &:hover::after{
                 border-bottom: none;    
             }
         }

@@ -20,7 +20,7 @@
   width: 330px;
   margin: 0 auto;
   box-shadow: 1px 2px 6px 1px #718093;
-  p{
+  > p{
     font-size: $font-s;
     text-align: center;
     font-weight: $fw-bold;

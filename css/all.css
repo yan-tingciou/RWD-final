@@ -228,7 +228,7 @@ input[type=button] {
   font-weight: bold;
   background: rgba(61, 17, 1, 0.7);
 }
-.menu > li > aa:hover::after {
+.menu > li > a:hover::after {
   border-bottom: none;
 }
 
@@ -945,7 +945,7 @@ line {
   -webkit-box-shadow: 1px 2px 6px 1px #718093;
           box-shadow: 1px 2px 6px 1px #718093;
 }
-.login-container p {
+.login-container > p {
   font-size: 18px;
   text-align: center;
   font-weight: bold;
