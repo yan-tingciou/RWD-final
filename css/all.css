@@ -63,6 +63,18 @@ a {
   text-decoration: none;
 }
 
+input[type=name], input[type=tel], input[type=email], input[type=number], input[type=password], input[type=search] {
+  width: 100%;
+}
+
+body {
+  background: rgb(239, 233, 231);
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+
 .header {
   background: rgba(0, 0, 0, 0.75);
   position: fixed;
