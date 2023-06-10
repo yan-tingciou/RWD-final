@@ -202,9 +202,9 @@
   &:hover{
     font-weight: $fw-bold;
   }
-}
-.heart.full{
-  font-weight: $fw-bold;
+  &.full{
+    font-weight: $fw-bold;
+  }
 }
 .burger-pop{
   position: absolute;/*位移要超出原有的框架，才能做出緞帶效果*/
@@ -227,7 +227,7 @@
     transform: translateX(40%) rotate(45deg)  translateY(50%);
   }
 }
-line{
+.line{
   display: block;
   width: 86px;
   border-bottom: 2px solid $color-main;

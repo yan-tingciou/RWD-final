@@ -63,18 +63,6 @@ a {
   text-decoration: none;
 }
 
-input[type=name], input[type=tel], input[type=email], input[type=number], input[type=password], input[type=search] {
-  width: 100%;
-}
-
-body {
-  background: rgb(239, 233, 231);
-}
-
-input[type=button] {
-  cursor: pointer;
-}
-
 .header {
   background: rgba(0, 0, 0, 0.75);
   position: fixed;
@@ -212,17 +200,6 @@ input[type=button] {
 @media (max-width: 568px) {
   .banner {
     background: url(https://github.com/yan-tingciou/RWD-final/blob/main/images/Bitmap.png?raw=true) no-repeat;
-    height: 420px;
-    background-position: center center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -880,7 +857,6 @@ input[type=button] {
 .heart:hover {
   font-weight: bold;
 }
-
 .heart.full {
   font-weight: bold;
 }
@@ -908,7 +884,7 @@ input[type=button] {
           transform: translateX(40%) rotate(45deg) translateY(50%);
 }
 
-line {
+.line {
   display: block;
   width: 86px;
   border-bottom: 2px solid #3D1101;
