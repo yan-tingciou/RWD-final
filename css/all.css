@@ -478,18 +478,13 @@ input[type=button] {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media (max-width: 768px) {
-  .place {
-    padding: 4% 2%;
-  }
-}
 .place > li {
   width: 47%;
   margin: 20px 1.5% 0;
 }
 @media (max-width: 768px) {
   .place {
-    width: 48%;
+    padding: 4% 2%;
     margin: 20px 1% 0;
   }
 }

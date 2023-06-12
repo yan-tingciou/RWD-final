@@ -175,9 +175,6 @@
   }
 }
 .place{
-  @include pad(){
-    padding: 4% 2%;
-  }
   padding: 3%;
   position: relative;
   display: flex;
@@ -187,7 +184,7 @@
     margin: 20px 1.5% 0;
   }
   @include pad(){
-    width: 48%;
+    padding: 4% 2%;    
     margin: 20px 1% 0;
   }
   @include mobile568(){
