@@ -94,6 +94,22 @@
     border: none;
     margin-top: 4px; /*input跟上面label字的距離*/  
   }
+  a{
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+  }
+}
+.register-input-logo p{
+  padding-top: 10px;
+  font-size: 14px;
+  color: #FF5E45;
+}
+.register-input-logo .note{
+  color: rgb(239,233,231);
+}
+.register-input-logo .note-hide{
+  color: #FF5E45;
 }
 .register-button{
   padding: 30px 0 0;

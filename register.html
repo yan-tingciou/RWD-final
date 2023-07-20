@@ -58,18 +58,20 @@
           </div>
           <div class="register-input">
             <div class="register-input-logo">
-            <label for="email">Email Address*</label>
-            <label for="email" class="logo-email"><i class="fa-regular fa-envelope" style="color: rgba(61,17,0,0.50);"></i></label>
-            <input type="email" id="email" name="email">
+              <label for="email">Email Address*</label>
+              <label for="email" class="logo-email"><i class="fa-regular fa-envelope" style="color: rgba(61,17,0,0.50);"></i></label>
+              <input type="email" name="email" class="register_Email_Input">
+            </div>
+            <div class="register-input-logo">
+              <label for="password">Password*</label>
+              <label for="password" class="logo-pwd-1"><i class="fa-solid fa-lock" style="color: rgba(61,17,0,0.50);"></i></label>
+              <input type="password" name="pwd" class="register_Pwd_Input">
           </div>
             <div class="register-input-logo">
-            <label for="password">Password*</label>
-            <label for="password" class="logo-pwd-1"><i class="fa-solid fa-lock" style="color: rgba(61,17,0,0.50);"></i></label>
-            <input type="password" name="pwd" id="pwd">
-          </div>
-            <div class="register-input-logo">
-              <label for="password" class="logo-pwd-2"><i class="fa-solid fa-lock" style="color: rgba(61,17,0,0.50);"></i></label>
-              <input type="password" name="pwd" id="pwd">
+              <label for="password" class="logo-pwd-2">
+              <i class="fa-solid fa-lock" style="color: rgba(61,17,0,0.50);"></i></label>
+              <input type="password" name="pwd" class="register_Pwd2_Input">
+              <p class="note">前後輸入密碼不相符</p>
               <a href="login.html"><p>已經有帳號了？</p></a>
           </div>
             <div class="register-button">
@@ -107,6 +109,7 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
   <script src="https://kit.fontawesome.com/121eb476ab.js" crossorigin="anonymous"></script>
   <script src="js/all.js"></script>
 </body>
