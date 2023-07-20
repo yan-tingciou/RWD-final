@@ -11,6 +11,33 @@ $(document).ready(function(){
   });
 });
 
+//前後輸入密碼不相符
+const register_Email_Input = document.querySelector(".register_Email_Input");
+const register_Pwd_Input = document.querySelector(".register_Pwd_Input");
+const register_Pwd2_Input = document.querySelector(".register_Pwd2_Input");
+const register_Input_Logo = document.querySelector(".register-input-logo");
+
+register_Pwd_Input.addEventListener("keyup", function () {
+  let p = document.querySelector(".note");
+  if (register_Pwd2_Input.value !== register_Pwd_Input.value) {
+    p.classList.add("note-hide");
+  }
+  if (register_Pwd2_Input.value == register_Pwd_Input.value) {
+    p.classList.remove("note-hide");
+  }
+});
+
+register_Pwd2_Input.addEventListener("keyup", function () {
+  let p = document.querySelector(".note");
+  if (register_Pwd2_Input.value !== register_Pwd_Input.value) {
+    p.classList.add("note-hide");
+  }
+  if (register_Pwd2_Input.value == register_Pwd_Input.value) {
+    p.classList.remove("note-hide");
+  }
+});
+
+//註冊
 const orange_register = document.querySelector(".orange-register");
 
 orange_register.addEventListener("click", function (e) {
@@ -42,12 +69,13 @@ function clickRegister() {
       console.log(error);
     });
 }
+
+//登入
 const email_Input = document.querySelector(".email_Input");
 const pwd_Input = document.querySelector(".pwd_Input");
 const login = document.querySelector(".orange-login");
 
-login.addEventListener("click", function (e) {
-  e.preventDefault();
+login.addEventListener("click", function () {
   callLoginUp();
 });
 
